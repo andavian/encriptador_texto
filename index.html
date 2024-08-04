@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylefuture.css" />
+    <title>Encriptador</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <!-- <div>
+          <img class="logo" src="/assets/Logo.png" alt="logo de alura" />
+        </div> -->
+        <div>
+          <h1>Encriptador de texto</h1>
+        </div>
+      </header>
+      <main>
+        <section class="section1">
+          <textarea
+            id="inputText"
+            class="text-input"
+            placeholder="Ingrese el texto aquí"
+            oninput="validateInput()"
+          ></textarea>
+          <div class="info">
+            <p id="errorMessage" style="display: none">
+              El texto solo debe contener letras minúsculas sin acentos.
+            </p>
+          </div>
+          <div class="buttons">
+            <button class="btn" onclick="handleEncryption()">Encriptar</button>
+            <button class="btn" onclick="handleDecryption()">
+              Desencriptar
+            </button>
+          </div>
+        </section>
+        <section class="section2">
+          <textarea
+            id="outputText"
+            class="text-output"
+            placeholder="Texto encriptado/desencriptado"
+          ></textarea>
+          <div class="buttons">
+            <button class="btn-copiar" onclick="copyToClipboard()">
+              Copiar
+            </button>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <h4>Aplicación creada por Anibal Elbaum</h4>
+      </footer>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>

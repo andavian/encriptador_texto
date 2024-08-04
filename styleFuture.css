@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap");
+
+:root {
+  --bg-color: #1c1c1c; /* Fondo oscuro */
+  --primary-color: #0efffc; /* Texto y acentos en cian neón */
+  --secondary-color: #00bfa5; /* Acentos en verde neón */
+  --text-light: #ffffff; /* Texto claro */
+  --border-radius: 0px; /* Bordes afilados */
+  --font-family: "Orbitron", sans-serif; /* Tipografía robótica */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  font-weight: 400;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  gap: 3rem;
+}
+
+header,
+footer {
+  text-align: center;
+  padding: 20px;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+header {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+section {
+  background-color: #2b2b2b;
+  padding: 40px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  border: 2px solid var(--primary-color);
+}
+
+.text-input,
+.text-output {
+  width: 100%;
+  height: 70%;
+  border: 2px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  padding: 15px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  resize: none;
+  background-color: transparent;
+  color: var(--text-light);
+}
+
+.text-output {
+  background-color: #333333; /* Fondo más oscuro para salida */
+}
+
+.info {
+  font-size: 14px;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn,
+.btn-copiar {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  text-transform: uppercase;
+}
+
+.btn:hover,
+.btn-copiar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px var(--primary-color);
+}
+
+.btn-copiar {
+  margin-top: 1rem;
+}
+
+footer {
+  font-size: 14px;
+  color: var(--secondary-color);
+  border-top: 2px solid var(--primary-color);
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
